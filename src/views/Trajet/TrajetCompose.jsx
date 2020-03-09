@@ -21,6 +21,7 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
+import Map from "./Map"
 
 // core components
 
@@ -30,8 +31,9 @@ function TrajetCompose() {
       <Container>
           <center>
           <h3>
-                <b>Une carte du trajet arrivera prochainement</b>
+                <b>Le tracé du trajet arrivera prochainement</b>
           </h3>
+          <Map/>
           </center>
       </Container>
       <div id="sponsors"></div>
