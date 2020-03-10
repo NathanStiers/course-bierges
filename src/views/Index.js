@@ -38,17 +38,17 @@ function Index() {
     };
   });
   return (
-    <>
-      <IndexNavbar />
+    <div >
+      <IndexNavbar/>
       <IndexHeader />
-      <div className="main">
+      <div>
         <About/>
         <hr/>
         <Trajet/>
         <hr/>
         <Sponsors/>
       </div>
-    </>
+    </div>
   );
 }
 

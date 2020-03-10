@@ -28,7 +28,9 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container
+  Container,
+  Row,
+  Col
 } from "reactstrap";
 
 function IndexNavbar() {
@@ -75,7 +77,7 @@ function IndexNavbar() {
               width="80"
               eight="auto"
               className="mr-3"
-            ></img> 
+            ></img>
             Une course pour tous
           </NavbarBrand>
           <button
@@ -90,22 +92,27 @@ function IndexNavbar() {
             <span className="navbar-toggler-bar bar3" />
           </button>
         </div>
+        <Nav navbar className="ml-5">
+          <NavItem className="ml-5" >
+            <NavLink 
+              style={{color:"#c0171c", fontSize:"18px"}}
+              className="ml-5"
+              data-placement="bottom"
+              target="_blank"
+              href="https://chronolap.ledossard.com/inscription/index.php?id=786"
+              title="lien vers le site d'inscription"
+            >
+              <b>S'inscrire</b>
+              </NavLink>
+          </NavItem>
+        </Nav>
+
         <Collapse
           className="justify-content-end"
           navbar
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                target="_blank"
-                href="https://chronolap.ledossard.com/inscription/index.php?id=786"
-                title="lien vers le site d'inscription"
-              >
-                S'inscrire
-              </NavLink>
-            </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"

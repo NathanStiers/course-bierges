@@ -30,7 +30,7 @@ function AboutCompose() {
             <Container>
                 <center>
                     <h3>
-                        Pour la première fois depuis leur création, les horizons de la 40e unité de Bierges vous convie à un évènement d'une
+                        Pour la première fois depuis leur création, les horizons de la 40e unité de Bierges vous convient à un évènement d'une
                         envergure sans pareil.
                         Nous avons l'immense plaisir de vous annoncer le lancement de la course des <b>6 kilomètres de Bierges.</b><br />
                         Le but étant de nous aider à financer un voyage humanitaire en Croatie durant 15 jours en juillet<br /><br />
@@ -50,6 +50,8 @@ function AboutCompose() {
                         vous attendons en forme et avec votre bonne humeur pour mettre le feu.<br />
                         Pour les inscriptions, <a style={{ color: "red" }} href="https://chronolap.ledossard.com/inscription/index.php?id=786" title="lien d'inscription" target="_blank"><b>c'est par ici !</b></a>
                     </h3>
+                    <br/>
+                    <p style={{color:"lightgray"}}>Les billets ne pourront être remboursés en cas de désistements ou en cas d’annulation de l’événement pour cas de force majeure</p>
                 </center>
             </Container>
         </>
