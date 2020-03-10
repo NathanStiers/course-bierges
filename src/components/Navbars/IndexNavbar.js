@@ -92,11 +92,17 @@ function IndexNavbar() {
             <span className="navbar-toggler-bar bar3" />
           </button>
         </div>
-        <Nav navbar className="ml-5">
-          <NavItem className="ml-5" >
+        
+
+        <Collapse
+          className="justify-content-end"
+          navbar
+          isOpen={navbarCollapse}
+        >
+          <Nav navbar>
+          <NavItem  >
             <NavLink 
-              style={{color:"#c0171c", fontSize:"18px"}}
-              className="ml-5"
+              style={{color:"#c0171c", fontSize:"16px"}}
               data-placement="bottom"
               target="_blank"
               href="https://chronolap.ledossard.com/inscription/index.php?id=786"
@@ -105,14 +111,6 @@ function IndexNavbar() {
               <b>S'inscrire</b>
               </NavLink>
           </NavItem>
-        </Nav>
-
-        <Collapse
-          className="justify-content-end"
-          navbar
-          isOpen={navbarCollapse}
-        >
-          <Nav navbar>
             <NavItem>
               <NavLink
                 data-placement="bottom"
