@@ -16,20 +16,25 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useState} from "react";
 
 // reactstrap components
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
 
 import About from "./About/AboutCompose"
 import Trajet from "./Trajet/TrajetCompose"
 import Sponsors from "./Sponsors/SponsorsCompose"
+import ModalPaths from "./Modal"
 
 function Index() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("index");
@@ -39,15 +44,19 @@ function Index() {
   });
   return (
     <div >
-      <IndexNavbar/>
+      
+      <IndexNavbar c={handleClose} s={handleShow} show={show} />
       <IndexHeader />
       <div>
-        <About/>
-        <hr/>
-        <Trajet/>
-        <hr/>
-        <Sponsors/>
+        <About c={handleClose} s={handleShow} show={show} />
+        <ModalPaths show={show} handleClose={handleClose} />
+        <hr />
+        <Trajet />
+        <hr />
+        <Sponsors />
       </div>
+
+      
     </div>
   );
 }

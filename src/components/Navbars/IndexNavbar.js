@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useState} from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
 // reactstrap components
@@ -30,10 +30,14 @@ import {
   Nav,
   Container,
   Row,
-  Col
+  Col,
+  Modal
 } from "reactstrap";
 
-function IndexNavbar() {
+function IndexNavbar({
+  c, s, show
+}) {
+
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -102,11 +106,10 @@ function IndexNavbar() {
           <Nav navbar>
           <NavItem  >
             <NavLink 
-              style={{color:"#c0171c", fontSize:"16px"}}
+              style={{color:"#c0171c"}}
               data-placement="bottom"
-              target="_blank"
-              href="https://chronolap.ledossard.com/inscription/index.php?id=786"
-              title="lien vers le site d'inscription"
+              title="Explication d'inscription"
+              onClick={s}
             >
               <b>S'inscrire</b>
               </NavLink>

@@ -20,11 +20,16 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container} from "reactstrap";
+
+import ModalPaths from '../Modal'
+
 
 // core components
 
-function AboutCompose() {
+function AboutCompose({
+    c, s, show
+}) {
     return (
         <>
             <Container>
@@ -48,10 +53,10 @@ function AboutCompose() {
                         Ce rassemblement aura lieu le samedi 9 mai entre 10h et midi.<br /> Le départ se fera à la salle Jules Colette et se terminera au même endroit.
                         On sait que vous avez déjà hâte d'y être alors nous
                         vous attendons en forme et avec votre bonne humeur pour mettre le feu.<br />
-                        Pour les inscriptions, <a style={{ color: "red" }} href="https://chronolap.ledossard.com/inscription/index.php?id=786" title="lien d'inscription" target="_blank"><b>c'est par ici !</b></a>
+                        Pour les inscriptions, <a style={{ color: "red" }} title="lien d'inscription" target="_blank" onClick={s}><b>c'est par ici !</b></a>
                     </h3>
-                    <br/>
-                    <p style={{color:"lightgray"}}>Les billets ne pourront être remboursés en cas de désistements ou en cas d’annulation de l’événement pour cas de force majeure</p>
+                    <br />
+                    <p style={{ color: "lightgray" }}>Les billets ne pourront être remboursés en cas de désistements.<br></br> En cas d’annulation de l’événement pour cas de force majeure de plus amples informations seront fournies.</p>
                 </center>
             </Container>
         </>
